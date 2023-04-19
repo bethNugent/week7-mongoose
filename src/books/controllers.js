@@ -7,7 +7,7 @@ const getAllBooks = async (req, res) => {
         const books = await Book.find({});
         // console.log("books: ", typeof books, books);
     
-        res.status(200).json({message: "success", books: books});
+        res.status(200).json({message: "success!!!!!!!", books: books});
       } catch (error) {
         console.log(error);
       }
@@ -121,7 +121,8 @@ const deleteAllEntries = async (req, res) => {
    }
 }; 
 
-//DELETE ONE BOOK USING REQ.PARAMS
+
+//FIND AND DELETE ONE BOOK BY TITLE USING REQ.PARAMS
 const deleteOneBook = async (req, res) => {
     try {
         const title = req.params.title;
@@ -133,7 +134,7 @@ const deleteOneBook = async (req, res) => {
 };
 
 module.exports = {
-    getAllBooks, addBook, updateBookAuthor, deleteBook, searchUpdate, getBookByTitle, deleteAllEntries, deleteOneBook
+    getAllBooks, addBook, updateBookAuthor, deleteBook, searchUpdate, getBookByTitle, deleteAllEntries, deleteOneBook,
 };
 
 
