@@ -29,7 +29,7 @@ bookRouter.get("/books/getbookbytitle", getBookByTitle);
 //use delelte to delete all entries 
 bookRouter.delete("/books/deleteallentries", deleteAllEntries);
 
-//use req.params to delete a single entry
+//use req.params to find and delete a single entry
 bookRouter.delete("/books/deletebook/:title", deleteOneBook);
 
 
